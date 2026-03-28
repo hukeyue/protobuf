@@ -146,7 +146,7 @@ add_test(NAME conformance_cpp_test
 
 set(JSONCPP_WITH_TESTS OFF CACHE BOOL "Disable tests")
 
-if(BUILD_SHARED_LIBS)
+if(protobuf_BUILD_SHARED_LIBS)
   target_link_libraries(conformance_test_runner jsoncpp_lib)
 else()
   target_link_libraries(conformance_test_runner jsoncpp_static)

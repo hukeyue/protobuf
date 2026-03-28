@@ -42,7 +42,7 @@ endif()
 
 set(_protobuf_FIND_ABSL "if(NOT TARGET absl::strings)\n  find_package(absl CONFIG)\nendif()")
 
-if (BUILD_SHARED_LIBS AND MSVC)
+if (protobuf_BUILD_SHARED_LIBS AND MSVC)
   # On MSVC Abseil is bundled into a single DLL.
   # This condition is necessary as of abseil 20230125.3 when abseil is consumed
   # via add_subdirectory, the abseil_dll target is named abseil_dll, while if
